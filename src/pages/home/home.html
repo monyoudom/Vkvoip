@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+   <p> {{callerId}}</p>
+  <form [formGroup]="todo" (ngSubmit)="CallingForm()">
+    <ion-item>
+      <ion-label false>Call now</ion-label>
+      <ion-input type="number" formControlName="phone"></ion-input>
+    </ion-item>
+    
+    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+  </form>
+   
+  <button (click)="dial()">Call</button>
+
+
+     
+     <!--<video  preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer"><source [src]="Localvideo" type="video/mp4"/></video>-->
+</ion-content>
